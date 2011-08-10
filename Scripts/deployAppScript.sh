@@ -1,0 +1,4 @@
+rvm use 1.9.2
+s3cmd put /home/reuben/Sportaneous/Sportaneous-Web-App-XSBT/target/scala-2.9.0.1/web_2.9.0-1-1.0.0.war s3://elasticbeanstalk-us-east-1-773777220056
+elastic-beanstalk-create-application-version -a "sportaneousqa" -l $1 -s elasticbeanstalk-us-east-1-773777220056/web_2.9.0-1-1.0.0.war
+elastic-beanstalk-update-environment -e "sportaneousqa" -l $1

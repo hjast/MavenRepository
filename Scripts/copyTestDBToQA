@@ -1,0 +1,3 @@
+mysqldump --host=sportaneous.com -u reuben -p -P 3306 test -v > testdump.sql
+mysql -u reuben -p -P 3306 --host=qadatabase.cysieoc6uabv.us-east-1.rds.amazonaws.com sportaneousqa < testdump.sql
+
