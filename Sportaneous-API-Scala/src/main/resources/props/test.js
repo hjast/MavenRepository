@@ -1,0 +1,2 @@
+       $(document).ready(function(){
+           $(document).bgStretcher({      images: ['http://cdn1.1stwebdesigner.com/wp-content/uploads/2009/04/fun-photo/dynamic-einstein-picture.jpg'], imageWidth: 1024, imageHeight: 768      });      });

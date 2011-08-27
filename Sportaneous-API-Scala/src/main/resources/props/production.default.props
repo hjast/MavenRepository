@@ -1,0 +1,10 @@
+#Production API + Production PU
+api.host=api.sportaneous.com
+api.port=80
+db.pu=ProductionServerPU
+
+
+mongodb.name=mongotesting
+mongodb.host=aspen.mongomachine.com
+mongodb.user=reuben
+mongodb.pass=homersimpson

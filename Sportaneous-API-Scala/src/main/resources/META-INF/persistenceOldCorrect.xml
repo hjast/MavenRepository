@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="SportaneousPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+      <property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider"/>
+      <property name="hibernate.c3p0.min_size" value="5"/>
+      <property name="hibernate.c3p0.max_size" value="20"/>
+      <property name="hibernate.c3p0.timeout" value="300"/>
+      <property name="hibernate.c3p0.max_statements" value="5000"/>
+      <property name="hibernate.c3p0.idle_test_period" value="60"/>
+
+      <property name="hibernate.connection.username" value="reuben"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.password" value="yellow13"/>
+
+      <property name="hibernate.connection.url" value="jdbc:mysql://qadatabase.cysieoc6uabv.us-east-1.rds.amazonaws.com/sportaneousqa"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/>
+
+      <!-- Uncomment this line to show SQL statements -->
+
+      <!--<property name="hibernate.show_sql" value="false"/>-->
+
+      <!-- <property name="hibernate.hbm2ddl.auto" value="update"/> -->
+    </properties>
+  </persistence-unit>
+
+      <persistence-unit name="ProductionServerPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+      <property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider"/>
+      <property name="hibernate.c3p0.min_size" value="5"/>
+      <property name="hibernate.c3p0.max_size" value="20"/>
+      <property name="hibernate.c3p0.timeout" value="300"/>
+      <property name="hibernate.c3p0.max_statements" value="5000"/>
+      <property name="hibernate.c3p0.idle_test_period" value="60"/>
+
+      <property name="hibernate.connection.username" value="reuben"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.password" value="yellow13"/>
+
+      <property name="hibernate.connection.url" value="jdbc:mysql://sportaneous.com:3306/sportaneous"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLMyISAMDialect"/>
+
+      <!-- Uncomment this line to show SQL statements -->
+      <!--
+      <property name="hibernate.show_sql" value="false"/>
+       -->
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+
+      <persistence-unit name="TestServerPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+             <property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider"/>
+          <property name="hibernate.c3p0.min_size" value="5"/>
+          <property name="hibernate.c3p0.max_size" value="20"/>
+          <property name="hibernate.c3p0.timeout" value="300"/>
+          <property name="hibernate.c3p0.max_statements" value="5000"/>
+          <property name="hibernate.c3p0.idle_test_period" value="60"/>
+
+           <property name="hibernate.connection.max_allowed_packet" value="10000000" />
+          <property name="hibernate.connection.username" value="reuben"/>
+          <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+        <property name="hibernate.connection.password" value="yellow13"/>
+          <!-- <property name="hibernate.connection.url" value="jdbc:mysql://sportaneous-db:3306/sportaneous"/> -->
+          <property name="hibernate.connection.url" value="jdbc:mysql://sportaneous.com:3306/test"/>
+          <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/>
+
+          <!-- Uncomment this line to show SQL statements -->
+
+         <!-- <property name="hibernate.show_sql" value="false"/> -->
+
+            <!--<property name="hibernate.hbm2ddl.auto" value="update"/> -->
+           <property name="hibernate.c3p0.preferredTestQuery" value="SELECT 1;" />
+            <property name="hibernate.c3p0.testConnectionOnCheckout" value="true" />
+    </properties>
+  </persistence-unit>
+</persistence>

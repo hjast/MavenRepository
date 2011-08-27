@@ -1,0 +1,11 @@
+#For Dev Local API + SportaneousPU
+api.host=localhost
+api.port=8080
+db.pu=SportaneousPU
+
+mongodb.name=mongotesting
+mongodb.host=aspen.mongomachine.com
+mongodb.user=reuben
+mongodb.pass=homersimpson
+
+

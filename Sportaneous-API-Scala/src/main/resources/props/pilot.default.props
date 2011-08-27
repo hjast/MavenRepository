@@ -1,0 +1,9 @@
+# QA API and Sportaneous PU
+api.host=sportaneousapi.elasticbeanstalk.com
+api.port=80
+db.pu=NewProductionPU
+
+mongodb.name=mongotesting
+mongodb.host=aspen.mongomachine.com
+mongodb.user=reuben
+mongodb.pass=homersimpson
